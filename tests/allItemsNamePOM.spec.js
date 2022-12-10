@@ -1,17 +1,20 @@
 const {test, expect} = require('@playwright/test')
+const {LoginPage}= require('../pageObjects/LoginPage')
+const {DashboardPage} = require('../pageObjects/DashboardPage')
 
 test('Get All Items Name',async ({page})=>{
-
+    const loginPage = new LoginPage(page)
+    const dashboardPage = new DashboardPage(Page)
     const pageTitle= 'Swag Labs'
-
     const usernameValue = 'standard_user'
     const userPasswordValue = 'abcd'
     const errorMessage = page.locator('h3[data-test="error"]')
-    const dashboardLocator = page.locator('//div[text()="Sauce Labs Backpack"]')
     const itemsList = page.locator('div[class="inventory_item_name"]')
 
     
-    await page.goto(pageUrl)
+    await loginPage.goTo(pageUrl,pageTitle)
+    await loginPage.validLogin(usernameValue,userPasswordValue)
+    
     await expect(page).toHaveTitle(pageTitle)
     await usernameLocator.type(usernameValue)
     await passwordLocator.type(userPasswordValue)
