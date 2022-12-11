@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 const {POManager} = require('../pageObjects/POManager')
-const dataset = JSON.parse(JSON.stringify(require('../test-Data/dataset.json')))
+const dataset = JSON.parse(JSON.stringify(require('../test-data/dataset.json')))
 
 for (let data of dataset){
 test.only(`Login with ${data.userPasswordValue} password: Sauce Lap'` , async ({page})=>{
