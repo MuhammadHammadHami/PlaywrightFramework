@@ -7,6 +7,8 @@ class TestsPOM{
         this.radioButton = page.locator('input[value="radio1"]')
         this.dropdownLocator = page.locator('select[id="dropdown-class-example"]')
         this.checkboxLocator = page.locator('input[id="checkBoxOption1"]')
+        this.suggestionBox = page.locator('input[id="autocomplete"]')
+        this.suggestedOption = page.locator('ul[id="ui-id-1"] li')
 
     }
 
@@ -32,6 +34,15 @@ class TestsPOM{
         await expect(this.checkboxLocator).not.toBeChecked()
         await this.checkboxLocator.click()
         await expect(this.checkboxLocator).toBeChecked()
+    }
+
+    async selectSuggestionBox(text,expectedText){
+        await expect(this.suggestionBox).toBeEmpty()
+        await this.suggestionBox.fill(text)
+        await this.suggestedOption.locator(expectedText).click()
+
+        await this.page.pause()
+
     }
 
 }

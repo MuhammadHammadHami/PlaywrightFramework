@@ -1,4 +1,6 @@
 {
     "url": "https://rahulshettyacademy.com/AutomationPractice/",
-    "title": "Practice Page"
+    "title": "Practice Page",
+    "text": "Pa",
+    "expectedText": "text = Pakistan"
 }
