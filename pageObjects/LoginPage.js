@@ -13,7 +13,6 @@ class LoginPage {
    async goTo(pageUrl){
         await this.page.goto(pageUrl)
 
-
     }
     async validLogin(username,password){
 
