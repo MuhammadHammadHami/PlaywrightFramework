@@ -16,7 +16,7 @@ test('Login with valid credentials', async ({page})=>{
     await usernameLocator.type(usernameValue)
     await passwordLocator.type(userPasswordValue)
     await signinBtnLocator.click()
-    await expect(dashboardLocator).toHaveText('Sauce Labs Backpack')
+    await expect(dashboardLocator).toHaveText('Sauce Labs Backpack') 
 
 });
 
