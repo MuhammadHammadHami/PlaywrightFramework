@@ -1,11 +1,9 @@
 const {test, expect} = require('@playwright/test')
 
 test('Get All Items Name',async ({page})=>{
-    const pageUrl = 'https://www.saucedemo.com/'
+
     const pageTitle= 'Swag Labs'
-    const usernameLocator = page.locator('input[id="user-name"]')
-    const passwordLocator = page.locator('input[id="password"]')
-    const signinBtnLocator = page.locator('input[id="login-button"]')
+
     const usernameValue = 'standard_user'
     const userPasswordValue = 'abcd'
     const errorMessage = page.locator('h3[data-test="error"]')
