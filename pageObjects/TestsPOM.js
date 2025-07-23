@@ -41,7 +41,7 @@ class TestsPOM{
         await this.suggestionBox.fill(text)
         await this.suggestedOption.locator(expectedText).click()
 
-        await this.page.pause()
+       // await this.page.pause()
 
     }
 
