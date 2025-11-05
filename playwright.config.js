@@ -16,10 +16,12 @@ const config = {
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    baseURL: "https://www.saucedemo.com/",
     browserName: "chromium",
     headless: false,
     screenshot: 'on',
-    trace: 'retain-on-failure'
+    trace: 'retain-on-failure',
+    viewport: { width: 1280, height: 720 },
   },
 
 };

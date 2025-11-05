@@ -1,0 +1,15 @@
+{
+    "invalidData": {
+    "pageUrl" : "https://www.saucedemo.com/",
+    "pageTitle" : "Swag Labs",
+    "usernameValue" : "standard_user",
+    "userPasswordValue" : "abcd"
+    },
+
+   "validData": {
+        "pageUrl" : "https://www.saucedemo.com/",
+        "pageTitle" : "Swag Labs",
+        "usernameValue" : "standard_user",
+        "userPasswordValue" : "secret_sauce"
+    }
+}
