@@ -1,16 +1,16 @@
-[
-    {
+{
+    "invalidData": {
     "pageUrl" : "https://www.saucedemo.com/",
     "pageTitle" : "Swag Labs",
     "usernameValue" : "standard_user",
-    "userPasswordValue" : "abcd"
+    "userPasswordValue" : "abcd",
+    "errorMessage": "Username and password"
     },
 
-    {
+   "validData": {
         "pageUrl" : "https://www.saucedemo.com/",
         "pageTitle" : "Swag Labs",
         "usernameValue" : "standard_user",
         "userPasswordValue" : "secret_sauce"
     }
-
-]
+}

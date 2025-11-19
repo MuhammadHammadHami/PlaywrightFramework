@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test')
-const {POManager} = require('../pageObjects/POManager')
-const dataset = require('../test-data/practiceData.json')
+const {POManager} = require('../../pageObjects/POManager')
+const dataset = require('../../fixtures/test-data/dataset.json')
 
 test(`Checkbox Test`, async({page})=>{
 
@@ -10,6 +10,5 @@ test(`Checkbox Test`, async({page})=>{
     await checkbox.goto(dataset.url)
     await expect(page).toHaveTitle(dataset.title)
     await checkbox.selectCheckbox()
-//    select[id="dropdown-class-example"] [value="option1"]
 
 })

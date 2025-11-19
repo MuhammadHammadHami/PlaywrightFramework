@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test')
-const {POManager} = require('../pageObjects/POManager')
-const dataset = require('../test-data/practiceData.json')
+const {POManager} = require('../../pageObjects/POManager')
+const dataset = require('../../fixtures/test-data/practiceData.json')
 
 test('Radio Button Test', async({page})=>{
 
