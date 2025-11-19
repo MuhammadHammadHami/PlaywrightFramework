@@ -14,7 +14,7 @@ const config = {
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [['list'], ['html']],
 
 
   expect: {
@@ -29,7 +29,7 @@ const config = {
   use: {
     baseURL: "https://www.saucedemo.com/",
     // browserName: "chromium",
-    headless: false,
+    headless: true,
     screenshot: 'on',
     trace: 'retain-on-failure',
     //trace: 'on-first-retry',

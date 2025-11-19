@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 // Read environment from `.env`, default to `dev`
-const env = process.env.ENV || 'prod';
+const env = process.env.ENV || 'dev';
 
 const allUrl = {
   dev: {

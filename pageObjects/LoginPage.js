@@ -1,3 +1,6 @@
+const {expect} = require('@playwright/test');
+import newData from '../fixtures/test-data/newData.json'
+
 class LoginPage {
 
     constructor(page){
@@ -26,7 +29,8 @@ class LoginPage {
         await this.usernameLocator.type(username)
         await this.passwordLocator.type(password)
         await this.signinBtnLocator.click()
-//        await expect(this.errorMessage).toContainText('Username and password')
+        await expect(this.errorMessage).toBeVisible()
+        await expect(this.errorMessage).toContainText(newData.invalidData.errorMessage)
     }
 
 }
