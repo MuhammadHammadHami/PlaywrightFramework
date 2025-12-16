@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'Node18' // Must match the NodeJS tool name from Jenkins config
+        nodejs 'Node18'  // Point to manually installed Node
     }
 
     environment {
@@ -15,28 +15,24 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Cloning the repository...'
                 checkout scm
             }
         }
 
         stage('Install dependencies') {
             steps {
-                echo 'Installing packages...'
                 sh 'npm ci'
             }
         }
 
         stage('Install Playwright browsers') {
             steps {
-                echo 'Installing required browsers...'
                 sh 'npx playwright install --with-deps'
             }
         }
 
         stage('Run Playwright tests') {
             steps {
-                echo 'Executing Playwright tests...'
                 sh 'npx playwright test'
             }
         }
@@ -44,11 +40,11 @@ pipeline {
 
     post {
         always {
-            echo 'Archiving Playwright report...'
+            // Make sure this runs inside a node/workspace
             archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
         }
         failure {
-            echo 'One or more tests failed.'
+            echo 'Tests failed. Check the report.'
         }
     }
 }
