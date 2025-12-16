@@ -9,3 +9,4 @@ node_modules/
 # Playwright
 /blob-report/
 .env
+tests/demo-shop
