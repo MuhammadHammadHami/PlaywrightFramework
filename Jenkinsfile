@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'Node18'  // Point to manually installed Node
-    }
-
     environment {
         VALIDUSERNAME = credentials('VALIDUSERNAME')
         VALIDPASSWORD = credentials('VALIDPASSWORD')
@@ -21,6 +17,8 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
+                sh 'node -v'
+                sh 'npm -v'
                 sh 'npm ci'
             }
         }
@@ -40,11 +38,7 @@ pipeline {
 
     post {
         always {
-            // Make sure this runs inside a node/workspace
             archiveArtifacts artifacts: 'playwright-report/**', fingerprint: true
-        }
-        failure {
-            echo 'Tests failed. Check the report.'
         }
     }
 }
