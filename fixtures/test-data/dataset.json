@@ -1,16 +1,17 @@
-[
-    {
-    "pageUrl" : "https://www.saucedemo.com/",
-    "pageTitle" : "Swag Labs",
+{
+    "rahulshetty": {
+    "pageUrl" : "https://rahulshettyacademy.com/AutomationPractice/",
+    "pageTitle" : "Practice Page",
     "usernameValue" : "standard_user",
     "userPasswordValue" : "abcd"
     },
 
-    {
+    "saucedemo":{
         "pageUrl" : "https://www.saucedemo.com/",
         "pageTitle" : "Swag Labs",
         "usernameValue" : "standard_user",
         "userPasswordValue" : "secret_sauce"
     }
 
-]
+}
+
