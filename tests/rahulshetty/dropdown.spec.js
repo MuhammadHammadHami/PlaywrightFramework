@@ -7,9 +7,8 @@ test(`Dropdown Test`, async({page})=>{
     const poManager = new POManager(page)
     const dropdown = poManager.getTestsPOMPage()
     
-    await dropdown.goto(dataset.url)
-    await expect(page).toHaveTitle(dataset.title)
+    await dropdown.goto(dataset.rahulshetty.pageUrl)
+    await expect(page).toHaveTitle(dataset.rahulshetty.pageTitle)
     await dropdown.selectDropdown()
-//    select[id="dropdown-class-example"] [value="option1"]
 
-})
+}) 
