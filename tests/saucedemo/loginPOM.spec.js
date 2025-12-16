@@ -1,7 +1,6 @@
 const {test, expect} = require('@playwright/test');
 const {POManager} = require('../../pageObjects/POManager')
 const env = require ('../../utils/Testoptions'); 
-const dataset = JSON.parse(JSON.stringify(require('../../fixtures/test-data/dataset.json')))
 const newData = JSON.parse(JSON.stringify(require('../../fixtures/test-data/newData.json')))
 
 // for (let data of dataset){
@@ -17,7 +16,7 @@ const newData = JSON.parse(JSON.stringify(require('../../fixtures/test-data/newD
 
 // }
 
-test('Login with invalid credentials', async ({page})=>{
+test('Login with invalid credentials ', async ({page})=>{
     
     const poManager = new POManager(page)
     const loginPage = poManager.getLoginPage()
