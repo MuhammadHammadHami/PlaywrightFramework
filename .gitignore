@@ -1,12 +1,26 @@
+# Node dependencies
 node_modules/
-/test-results/
-/playwright-report/
-/playwright/.cache/
-/test-results/
-/playwright-report/
-/playwright/.cache/
-
-# Playwright
-/blob-report/
-.env
 /tests/demo-shop/
+
+# Playwright output
+playwright-report/
+test-results/
+
+# Environment variables
+.env
+
+# Docker
+.dockerignore
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
